@@ -1,0 +1,54 @@
+.region-code {
+    display: inline-block;
+    position: relative;
+
+    font-size: 0.34rem;
+    font-weight: 400;
+    color: #111111;
+    position: relative;
+    padding-right: 0.3rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        transform: rotate( -45deg) translateY(0.1rem);
+        border-top: 0.14rem solid #555555;
+        border-left: 0.14rem solid transparent;
+        border-right: 0.14rem solid transparent;
+        border-bottom: 0.14rem solid transparent;
+    }
+
+    .region-list {
+        position: absolute;
+        top: 0.6rem;
+        left: 0rem;
+        width: 4rem;
+        background: #ffffff;
+
+        background-color: white;
+        box-shadow: 0 0.03rem 0.2rem rgba(0, 0, 0, 0.2);
+        border-radius: 0.03rem;
+        // box-sizing: border-box;
+        z-index: 1800;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.06rem 0.1rem;
+            font-size: 0.2rem;
+            font-weight: 400;
+            color: #111111;
+            &.active {
+                background-color: rgb(255, 247, 231);
+                color: rgb(245, 60, 50);
+            }
+            &:hover {
+                background-color: rgb(235, 236, 240);
+            }
+        }
+    }
+}

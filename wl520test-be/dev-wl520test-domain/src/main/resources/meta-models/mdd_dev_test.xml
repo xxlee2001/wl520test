@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components xmlns="http://www.imeta.org/meta"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.imeta.org/meta http://upsms.yonyouup.com/meta.xsd">
+    <references>
+        <reference file="base.xml"/>
+    </references>
+    <component name="dev" moduleName="mdd" title="mdd开发组件" domain="mdd-dev-test">
+        <!--主表 -->
+        <class name="DevTest" title="mdd开发测试" tableName="mdd_dev_test">
+            <attributes>
+                <attribute name="username" columnName="username" title="user" type="String" iLength="36"/>
+
+                <!--参照类型-->
+                <attribute name="escz" columnName="escz" title="测试es参照" type="mdd.devcz.Cz" iLength="255"/>
+            </attributes>
+        </class>
+
+        <generalizations>
+            <generalization parent="base.entity.BizObject" child="DevTest"/>
+        </generalizations>
+
+    </component>
+</components>

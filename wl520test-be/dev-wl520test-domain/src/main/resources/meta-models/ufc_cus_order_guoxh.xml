@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components xmlns="http://www.imeta.org/meta"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.imeta.org/meta http://upsms.yonyouup.com/meta.xsd">
+    <references>
+        <reference file="ucfbase.xml"/>
+    </references>
+	<component name="order" moduleName="ucf" title="订单" domain="hpapaas"><!--domain 用于云端的服务挂载用,本地调试可不关注 -->
+		<class name="CusOrder" title="订单" tableName="mdd_cus_order">
+            <attributes>
+                <attribute name="transactionType" columnName="transaction_type" type="bd.bill.TransType" title="交易类型" iLength="64" isTransactionType="true" isRequired="false"/>
+                <attribute name="quotationNum" columnName="quotation_num" type="String" title="订单号" iLength="64" isRequired="false" isCode="true"/>
+                <attribute name="inquiryOrg" columnName="inquiry_org_id" type="bd.adminOrg.SalesOrgVO" title="询价组织" iLength="64" isMasterOrg="true" isRequired="false"/>
+
+
+                <attribute name="orderDate" columnName="order_date" type="DateTime" title="订单日期" isRequired="false"/>
+                <attribute name="orderAmount" columnName="order_amount" type="Decimal" title="订单金额" iPrecision="11" iScale="6" isRequired="false"/>
+				<attribute name="orderState" columnName="order_state" type="String" title="订单状态" iLength="64" isRequired="false"/>
+				<attribute name="orderType" columnName="order_type" type="String" title="订单类型" iLength="64" isRequired="false"/>
+            </attributes>
+        </class>
+		<realizations>
+            <realization supplier="ucfbase.ucfbaseItf.IAutoCode" client="CusOrder"/>
+            <realization supplier="ucfbase.ucfbaseItf.IApprovalFlow" client="CusOrder"/>
+        </realizations>
+
+        <generalizations>
+            <generalization parent="ucfbase.entity.BizObject" child="CusOrder"/>
+          <!--  <generalization parent="ucfbase.entity.BizObject" child="CusQuotationMateriel"/> -->
+        </generalizations>
+	</component>
+</components>

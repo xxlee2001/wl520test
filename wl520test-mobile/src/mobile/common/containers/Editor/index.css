@@ -1,0 +1,19 @@
+.headerL{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.headerImg{
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: .25rem;
+  overflow: hidden;
+}
+.headerImg img{
+  width: 100%;
+  height: 100%;
+}
+.mineList .am-list-item .am-list-line .am-list-extra{
+  flex-basis: 60%;
+}

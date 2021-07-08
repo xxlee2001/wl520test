@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"
+       default-autowire="byName">
+    <bean class="com.yonyou.cloud.middleware.rpc.RPCBeanFactory">
+        <constructor-arg value="common-mdf"/>
+        <constructor-arg value="c87e2267-1001-4c70-bb2a-ab41f3b81aa3"/>
+        <constructor-arg>
+            <list>
+                <value>com.yonyou.iuap.billcode.service.IBillNumberService</value>
+                <!--<value>com.yonyoucloud.userdefine.api.IAttrextServiceExtend</value>-->
+<!--                <value>com.yonyou.ucf.mdd.common.interfaces.rpc.ICommonQueryRPCService</value>-->
+<!--                <value>com.yonyoucloud.uretail.api.IBillQueryService</value>-->
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>

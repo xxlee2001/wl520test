@@ -1,0 +1,127 @@
+@import '../../static/font/style.css';
+body {
+    background-color: #ffffff;
+}
+.home-container {
+    height: 100%;
+    padding: 1.06rem 0.6rem 0;
+    background: url('../../static/images/bg.svg') no-repeat scroll center top;
+    background-size: contain;
+    box-sizing: border-box;
+    font-family: PingFangSC-Regular, PingFang SC;
+
+    .avatar {
+        & > img {
+            @width: 0.88rem;
+            display: block;
+            width: @width;
+            height: @width;
+        }
+    }
+
+    .title {
+        margin: 0.3rem 0 0 0;
+        font-size: 0.6rem;
+        font-weight: 400;
+        color: #555555;
+        line-height: 0.6rem;
+    }
+
+    .empty-container {
+        margin-top: 1.9rem;
+    }
+
+    .form {
+        margin-top: 0.44rem;
+        .u-form-control-affix-wrapper {
+            position: relative;
+            width: 100%;
+            .u-form-control {
+                font-size: 0.34rem;
+                font-weight: 400;
+                color: #111111;
+                border: none;
+                background: transparent;
+                width: 100%;
+                padding: 0;
+                padding-right: 0.5rem;
+                box-sizing: border-box;
+                &:hover:not([disabled]),
+                &:not([value=""]) {
+                    & + .u-form-control-simple-suffix {
+                        top: -0.2rem;
+                        .label {
+                            font-size: 0.24rem;
+                        }
+                    }
+                }
+            }
+            .u-form-control-simple-suffix {
+                position: absolute;
+                left: 0;
+                top: 0.32rem;
+                transition: top .15s cubic-bezier(.54, .21, .46, .75);
+                width: fit-content;
+                .label {
+                    font-size: 0.34rem;
+                    font-weight: 400;
+                    color: #BFBFBF;
+                }
+            }
+            .u-form-control-simple-prefix {
+                right: 0;
+                left: auto;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                z-index: 2;
+                line-height: 0;
+                color: rgba(0, 0, 0, 0.65);
+                width: auto;
+                text-align: center;
+                font-size: 0.12rem;
+                .uf {
+                    font-size: 0.35rem;
+                    // &.icon-open-eye {
+                    //     font-size: 0.1rem;
+                    // }
+                }
+            }
+        }
+        .u-form-item {
+            &:not(:last-child) {
+                padding: 0.56rem 0 0.1rem 0;
+                border-bottom: 0.01rem solid #E6E6E6;
+            }
+            &:last-child {
+                padding: 1.13rem 0 0.35rem 0 ;
+                .u-button-primary {
+                    width: 100%;
+                    height: 0.88rem;
+                    line-height: 0.88rem;
+                    background: linear-gradient(270deg, #E14C46 0%, #E87672 100%);
+                    box-shadow: 0rem 0.2rem 0.3rem 0rem rgba(0, 0, 0, 0.1);
+                    border-radius: 0.08rem;
+                    padding: 0;
+
+                    font-size: 0.36rem;
+                    font-weight: 400;
+                    color: #FFFFFF;
+                    &:disabled {
+                        opacity: 0.5;
+                    }
+                }
+            }
+            min-height: auto;
+            .phone-bar {
+                @height: 0.48rem;
+                line-height: @height;
+                @left: 1.16rem;
+                display: flex;
+                align-items: baseline;
+            }
+        }
+    }
+}

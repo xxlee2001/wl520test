@@ -1,0 +1,23 @@
+.valid-code {
+    .style {
+        background: linear-gradient(270deg, #E14C46 0%, #E87672 100%)!important;
+        border-radius: 0.06rem;
+        border: none;
+        color: #FFFFFF!important;
+        padding: 0.09rem 0.18rem;
+        line-height: 0.32rem;
+        font-size: 0.24rem;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+    }
+    .disabled() {
+        background: #FFFFFF!important;
+        border: 0.01rem solid #DCDCDC;
+        color: #555555!important;
+    }
+    &[disabled] {
+        .style();
+        .disabled();
+    }
+    .style();
+}

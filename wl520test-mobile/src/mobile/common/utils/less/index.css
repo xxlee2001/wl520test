@@ -1,0 +1,86 @@
+:root {
+    --color: green;
+}
+
+/* 登录-主题颜色 */
+.box {
+    background: url("../img/blueImg/loginb-bg.svg") no-repeat top left #fff;
+    background-size: 100% 3.6rem;
+}
+
+.log-button {
+    background: linear-gradient(270deg,
+            #588CE9 0%,
+            #80a3df 100%);
+}
+
+
+/* 工作台-主题颜色 */
+.work-box {
+    background: url("../img/blueImg/Navigation Bar - 1 Action 2.svg") no-repeat top left #fff;
+    background-size: 100% 5.5rem;
+
+}
+
+/* 我的-主题颜色 */
+.mine-box {
+    background: url("../img/blueImg/background-wo.svg") no-repeat -3rem -4rem;
+}
+
+.yo-setting {
+    background: url(../img/blueImg/shezhi.svg) no-repeat center center;
+    background-size: .4rem;
+}
+
+.yo-about {
+    background: url(../img/blueImg/guanyu.svg) no-repeat center center;
+    background-size: .4rem;
+}
+
+
+/* 底部导航样式和字体颜色 */
+
+.yo-action,
+.yo-action:hover {
+    color: var(--color) !important;
+}
+
+.yo-action .nav-plt {
+    background: url(../img/blueImg/work.png) no-repeat center center;
+    background-size: .56rem;
+}
+
+.yo-action .nav-mine {
+    background: url(../img/blueImg/chmineB.svg) no-repeat center center;
+    background-size: .56rem;
+}
+
+/* 取消 字体颜色 */
+.am-modal-button-group-v .am-modal-button {
+    color: var(--color) !important;
+}
+
+/* 退出登录 字体颜色 */
+.logoutStyle {
+    color: var(--color) !important;
+}
+
+/* 清除缓存  删除 字体颜色 */
+.am-modal-button-group-h .am-modal-button {
+    color: var(--color);
+}
+
+/* 多语言中对号的颜色 */
+.i18nsetting .am-radio.am-radio-checked .am-radio-inner:after {
+    color: var(--color) !important;
+}
+
+.am-radio.am-radio-checked .am-radio-inner:after {
+    color: var(--color) !important;
+    border-color: var(--color) !important;
+}
+
+/* 环境切换管理 颜色 */
+.am-navbar-light {
+    color: var(--color) !important;
+}

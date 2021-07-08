@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="38px" viewBox="0 0 22 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Bars/Navigation Bars/APP/Left/返回</title>
+    <g id="02-启动页及独立应用" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的-设置" transform="translate(-32.000000, -111.000000)">
+            <g id="导航栏" transform="translate(20.000000, 100.000000)">
+                <g id="返回" transform="translate(1.000000, 7.000000)">
+                    <g id="编组" transform="translate(0.000000, 1.000000)">
+                        <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="44" height="44"></rect>
+                        <polygon id="Stroke-1" fill="#111111" points="32.1222331 38 16.1213809 21.9991477 32.1222331 6.00012102 30.0010338 3.87867966 11.8786191 21.9990267 30.0009128 40.1213203"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

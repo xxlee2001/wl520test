@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components xmlns="http://www.imeta.org/meta"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.imeta.org/meta http://upsms.yonyouup.com/meta.xsd">
+    <references>
+        <reference file="ucfbase.xml"/>
+    </references>
+    <component name="customer" moduleName="ucf" title="客户报价单" domain="hpapaas"><!--domain 用于云端的服务挂载用,本地调试可不关注 -->
+        <!--主表 -->
+        <class name="CusQuotation" title="客户报价单" tableName="mdd_cus_quotation">
+            <attributes>
+                <attribute name="transactionType" columnName="transaction_type" type="bd.bill.TransType" title="交易类型" iLength="64" isTransactionType="true" isRequired="false"/>
+                <attribute name="quotationNum" columnName="quotation_num" type="String" title="报价单号" iLength="64" isRequired="false" isCode="true"/>
+                <attribute name="billDate" columnName="bill_date" type="DateTime" title="单据日期" isRequired="false"/>
+                <attribute name="customerId" columnName="customer_id" type="aa.merchant.Merchant" title="客户档案ID" iLength="64" isRequired="false"/>
+                <attribute name="cusContacts" columnName="cus_contacts" type="String" title="客户联系人" iLength="255" isRequired="false"/>
+                <attribute name="cusContactsTel" columnName="cus_contacts_tel" type="String" title="客户联系人固定电话" iLength="255" isRequired="false"/>
+                <attribute name="cusContactsMobil" columnName="cus_contacts_mobil" type="String" title="客户联系人手机号" iLength="255" isRequired="false"/>
+                <attribute name="salesman" columnName="salesman_id" type="bd.staff.Staff" title="销售业务员" iLength="64" isRequired="false"/>
+                <attribute name="transCurrency" columnName="trans_currency_id" type="bd.currencytenant.CurrencyTenantVO" title="交易币种" iLength="64" isRequired="false"/>
+                <attribute name="localCurrency" columnName="local_currency_id" type="bd.currencytenant.CurrencyTenantVO" title="本币" iLength="64" isRequired="false"/>
+                <attribute name="exchangeRate" columnName="exchange_rate" type="bd.exchangeRate.ExchangeRateVO" title="汇率" iLength="64" isRequired="false"/>
+                <attribute name="taxFreeAmount" columnName="tax_free_amount" type="Decimal" title="无税金额" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxAmount" columnName="tax_amount" type="Decimal" title="税额" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="valueTaxTotal" columnName="value_tax_total" type="Decimal" title="价税合计" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxFreeInLocal" columnName="tax_free_in_local" type="Decimal" title="本币无税金额" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxInLocal" columnName="tax_in_local" type="Decimal" title="本币税额" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="valueTaxInLocal" columnName="value_tax_in_local" type="Decimal" title="本币价税合计" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="memo" columnName="memo" type="String" title="备注" iLength="255" isRequired="false"/>
+                <attribute name="inquiryOrg" columnName="inquiry_org_id" type="bd.adminOrg.SalesOrgVO" title="询价组织" iLength="64" isMasterOrg="true" isRequired="false"/>
+                <attribute name="inquiryDept" columnName="inquiry_dept_id" type="bd.adminOrg.AdminOrgVO" title="询价部门" iLength="64" isRequired="false"/>
+                <attribute name="customerVIP" columnName="customer_vip" type="Integer" title="客户VIP属性" iLength="64" isRequired="false"/>
+
+                <!--子表属性-->
+                <attribute name="CusQuotationMateriel" title="询价物料列表" type="ucf.customer.CusQuotationMateriel"/>
+            </attributes>
+        </class>
+        <!--子表 -->
+        <class name="CusQuotationMateriel" title="客户报价单物料" tableName="mdd_cus_quotation_materiel">
+            <attributes>
+                <attribute name="materielId" columnName="materiel_id" type="aa.product.Product" title="物料ID" iLength="64" isRequired="false"/>
+                <attribute name="materielNum" columnName="materiel_num" type="String" title="物料编号" iLength="64" isRequired="false"/>
+                <attribute name="unitName" columnName="unit_name" type="String" title="主单位名称" iLength="64" isRequired="false"/>
+                <attribute name="skuId" columnName="sku_id" type="String" title="物料SKU_ID" iLength="64" isRequired="false"/>
+                <attribute name="skuNum" columnName="sku_num" type="String" title="物料SKU编号" iLength="64" isRequired="false"/>
+                <attribute name="skuName" columnName="sku_name" type="String" title="物料SKU名称" iLength="64" isRequired="false"/>
+                <attribute name="quantity" columnName="quantity" type="Decimal" title="数量" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="inventoryQuantity" columnName="inventory_quantity" type="Decimal" title="库存数量" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="inventoryUnit" columnName="inventory_unit" type="String" title="库存单位" iLength="64" isRequired="false"/>
+                <attribute name="valuationQuantity" columnName="valuation_quantity" type="Decimal" title="计价数量" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="valuationUnit" columnName="valuation_unit" type="String" title="计价单位" iLength="64" isRequired="false"/>
+                <attribute name="taxFreePrice" columnName="tax_free_price" type="Decimal" title="无税单价" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxRate" columnName="tax_rate" type="Decimal" title="税率" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxPrice" columnName="tax_price" type="Decimal" title="含税单价" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxFreeAmount" columnName="tax_free_amount" type="Decimal" title="无税金额" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxAmount" columnName="tax_amount" type="Decimal" title="税额" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="valueTaxTotal" columnName="value_tax_total" type="Decimal" title="价税合计" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxFreePriceInLocal" columnName="tax_free_price_in_local" type="Decimal" title="本币无税单价" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxPriceInLocal" columnName="tax_price_in_local" type="Decimal" title="本币含税单价" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxFreeInLocal" columnName="tax_free_in_local" type="Decimal" title="本币无税金额" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="taxInLocal" columnName="tax_in_local" type="Decimal" title="本币税额" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="valueTaxInLocal" columnName="value_tax_in_local" type="Decimal" title="本币价税合计" iPrecision="11" iScale="6" isRequired="false"/>
+                <attribute name="buyer" columnName="buyer" type="bd.staff.Staff" title="采购员/专管员" iLength="255" isRequired="false"/>
+                <attribute name="memo" columnName="memo" type="String" title="备注" iLength="255" isRequired="false"/>
+
+                <!-- 主表信息 -->
+                <attribute name="cusQuotationId" columnName="cus_quotation_id" title="客户报价单主键" type="ucf.customer.CusQuotation"/>
+
+            </attributes>
+        </class>
+
+        <realizations>
+            <realization supplier="ucfbase.ucfbaseItf.IAutoCode" client="CusQuotation"/>
+            <realization supplier="ucfbase.ucfbaseItf.IApprovalFlow" client="CusQuotation"/>
+        </realizations>
+
+        <generalizations>
+            <generalization parent="ucfbase.entity.BizObject" child="CusQuotation"/>
+            <generalization parent="ucfbase.entity.BizObject" child="CusQuotationMateriel"/>
+        </generalizations>
+
+        <associations>
+        <association type="composition" typeB="CusQuotation" roleB="cusQuotationId" typeA="CusQuotationMateriel" roleA="CusQuotationMateriel"
+                     roleAMulti="0..n"/>
+    </associations>
+    </component>
+</components>

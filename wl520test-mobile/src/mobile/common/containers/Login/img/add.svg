@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>新增</title>
+    <g id="02-启动页及独立应用" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="登录-环境切换-列表" transform="translate(-267.000000, -606.000000)">
+            <g id="选人流程/组织架构/1/3备份-2" transform="translate(0.000000, 580.000000)">
+                <g id="新增" transform="translate(267.000000, 26.000000)">
+                    <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="44" height="44"></rect>
+                    <g id="Icon-/-Bars-/-Nav-Bars-/-APP-/-Right-Tool-/-Add" transform="translate(6.000000, 6.000000)" fill="#111111">
+                        <path d="M17.4111385,0.5 L17.4111385,31.3215385 L14.4111385,31.3215385 L14.4108769,17.411 L0.499876923,17.4110154 L0.499876923,14.4110154 L14.4108769,14.411 L14.4111385,0.5 L17.4111385,0.5 Z M31.3215385,14.4110154 L31.3215385,17.4110154 L20.0358242,17.4110154 L20.0358242,14.4110154 L31.3215385,14.4110154 Z" id="形状结合"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

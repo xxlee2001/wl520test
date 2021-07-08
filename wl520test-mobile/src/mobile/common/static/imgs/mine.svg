@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>形状结合</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="161.683023%" id="linearGradient-1">
+            <stop stop-color="#E14C46" offset="0%"></stop>
+            <stop stop-color="#E87672" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-246.599543%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#E14C46" offset="0%"></stop>
+            <stop stop-color="#E87672" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="独立应用" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的" transform="translate(-536.000000, -1468.000000)" fill-rule="nonzero">
+            <g id="编组" transform="translate(0.000000, 1458.000000)">
+                <g id="tabbar/item-5" transform="translate(515.000000, 10.000000)">
+                    <g id="编组" transform="translate(21.000000, 0.000000)">
+                        <g id="Group-5" transform="translate(8.000000, 8.000000)">
+                            <path d="M31.4902568,12.5703784 C31.4902568,18.9823598 26.1944841,24.1674054 19.6775541,24.1674054 C13.1598451,24.1674054 7.86390541,18.9825247 7.86390541,12.5703784 C7.86390541,6.15823204 13.1598451,0.973351351 19.6775541,0.973351351 C26.1944841,0.973351351 31.4902568,6.158397 31.4902568,12.5703784 Z" id="Stroke-1" fill="url(#linearGradient-1)"></path>
+                            <path d="M35.5571486,38.3185203 L3.41863514,38.3185203 C2.06804585,38.3185203 0.972689189,37.2231636 0.972689189,35.8725743 L0.972689189,29.6160878 C0.972689189,27.7426011 2.49161883,26.2241959 4.36458108,26.2241959 L34.6112027,26.2241959 C36.4849001,26.2241959 38.0030946,27.7423904 38.0030946,29.6160878 L38.0030946,35.8725743 C38.0030946,37.2231636 36.9077379,38.3185203 35.5571486,38.3185203 Z" id="Stroke-3" fill="url(#linearGradient-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+#container{
+  height: 100%;
+}
+.yo-home{
+   height: 100%;
+   display: flex;
+   flex-flow: column;
+   background-color: #fff;
+}
+.yo-index{
+  flex: 1;
+  width: 100vw;
+  overflow-x: auto;
+  /* background: url('./mbg.svg') no-repeat 0 0; */
+  /* background-size:  100vw; */
+  background-color: #F5F5F5;
+}
+.yo-index::-webkit-scrollbar{
+  display: none;
+}

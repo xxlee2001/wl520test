@@ -1,0 +1,18 @@
+/* .pt30{
+    padding-top: 1.3rem;
+} */
+.tipContent{
+    padding-top: 0.4rem;
+    color: #888888;
+    font-size: 0.24rem;
+    line-height: 0.6rem;
+    letter-spacing: 0.02rem;
+}
+
+.registerTip{
+    color:#BFBFBF;
+    font-size: 0.26rem;
+    padding-top: 0.15rem;
+    line-height: 0.32rem;
+    font-family: PingFangSC-Regular, sans-serif;
+}

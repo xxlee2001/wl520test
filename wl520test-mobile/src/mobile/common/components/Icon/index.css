@@ -1,0 +1,15 @@
+.yo-icon{
+  display: inline-block;
+  width: .4rem;
+  height: .4rem;
+}
+.yo-icon>svg{
+  display: block;
+}
+.mid-input{
+  width:  calc( 100% - .4rem - 1.16rem ) ;
+}
+.long-input{
+  width:  calc( 100% - .4rem ) ;
+}
+

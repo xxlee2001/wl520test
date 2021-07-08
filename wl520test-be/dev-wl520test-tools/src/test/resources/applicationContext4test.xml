@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+    <!--imeta-->
+    <context:component-scan base-package="org.imeta" use-default-filters="false">
+        <context:include-filter type="assignable" expression="org.imeta.core.base.MetaAware"/>
+        <context:include-filter type="assignable" expression="org.imeta.orm.base.SqlBuilder"/>
+        <context:include-filter type="assignable" expression="org.imeta.tpl.base.TplBean"/>
+        <context:include-filter type="assignable" expression="org.imeta.spring.tpl.builder.CodeGenerateService"/>
+        <context:exclude-filter type="aspectj" expression="org.imeta.tpl.builder.*.*"/>
+    </context:component-scan>
+    <bean id="MySqlTableColumnBuilder" class="org.imeta.tpl.builder.mysql.TableColumnBuilder"/>
+    <bean id="MySqlTableIndexBuilder" class="org.imeta.tpl.builder.mysql.TableIndexBuilder"/>
+    <bean id="OracleTableColumnBuilder" class="org.imeta.tpl.builder.oracle.TableColumnBuilder"/>
+    <bean id="OracleTableIndexBuilder" class="org.imeta.tpl.builder.oracle.TableIndexBuilder"/>
+    <bean id="metaBeanFactory" class="org.imeta.spring.base.MetaBeanFactory">
+        <property name="configLocation" value="classpath:../classes/imeta-config.properties"/>
+    </bean>
+    <!--depends-on定义依赖-->
+    <bean class="org.imeta.spring.tpl.TplBeanFactory" depends-on="metaBeanFactory">
+        <property name="configLocation" value="classpath:../classes/tpl-config.properties"/>
+        <property name="documentRoot" value="/"/>
+    </bean>
+    <bean id="mysql" class="org.imeta.orm.dialect.support.MySqlDialect"/>
+</beans>

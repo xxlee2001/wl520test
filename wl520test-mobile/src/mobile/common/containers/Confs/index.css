@@ -1,0 +1,15 @@
+.am-picker-popup-item{
+  color: #E14C46
+}
+.conf-mid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-button.log-button-cancel{
+  background: #fff;
+  border: 1px solid #eee;
+  color: #333;
+
+}

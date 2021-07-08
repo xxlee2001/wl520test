@@ -1,0 +1,7 @@
+.back-icon{
+  display: inline-block;
+  width: .2rem;
+  height: .36rem;
+  background: url(./back.svg) no-repeat center center;
+  background-size: .2rem .36rem;
+}

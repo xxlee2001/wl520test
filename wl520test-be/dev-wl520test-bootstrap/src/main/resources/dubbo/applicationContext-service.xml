@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+       default-autowire="byName">
+    <bean id="billMetaService" class="com.yonyou.ucf.mdd.ext.bill.meta.service.BillMetaService"></bean>
+     <bean id="billPOIService" class="com.yonyou.ucf.mdd.ext.bill.meta.service.BillPOIService"></bean>
+    <bean id="itemRuleService" class="com.yonyoucloud.uretail.bill.service.ItemRuleService"></bean>
+    <bean id="jointQueryService" class="com.yonyoucloud.uretail.bill.service.JointQueryServiceImpl">
+        <property name="jointQueryDao" ref="jointQueryDAO"></property>
+        <property name="itemRuleService" ref="itemRuleService"></property>
+    </bean>
+    <bean id="billProcessService" class="com.yonyoucloud.uretail.bill.service.BillProcessServiceImpl">
+        <property name="processDao" ref="billProcessDAO"></property>
+        <property name="itemRuleService" ref="itemRuleService"></property>
+    </bean>
+    <bean id="viewloader" class="com.yonyoucloud.uretail.bill.meta.loader.ViewLoader"/>
+    <bean id="viewModelloader" class="com.yonyoucloud.uretail.bill.meta.loader.ViewModelLoader"/>
+    <bean id="metaLoader" class="com.yonyoucloud.uretail.bill.meta.loader.MetaLoader">
+        <property name="loaders">
+            <bean class="org.springframework.beans.factory.config.MapFactoryBean">
+                <property name="targetMapClass">
+                    <value>org.apache.commons.collections.map.CaseInsensitiveMap</value>
+                </property>
+                <property name="sourceMap">
+                    <map>
+                        <entry key="viewApplication" value-ref="viewloader"/>
+                        <entry key="viewmodel" value-ref="viewModelloader"/>
+                    </map>
+                </property>
+            </bean>
+        </property>
+    </bean>
+    <bean id="billDesignService" class="com.yonyoucloud.uretail.bill.meta.service.BillDesignService"></bean>
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+       default-autowire="byName">
+    <bean id="commandDAO" class="com.yonyoucloud.uretail.bill.dao.CommandDAOImpl"></bean>
+    <bean id="itemRuleDAO" class="com.yonyoucloud.uretail.bill.dao.ItemRuleDAOImpl"></bean>
+    <bean id="itemRuleScriptDAO" class="com.yonyoucloud.uretail.bill.dao.ItemRuleScriptDAOImpl"></bean>
+    <bean id="statusDAO" class="com.yonyoucloud.uretail.bill.dao.StatusDAOImpl"></bean>
+    <bean id="statusItemDAO" class="com.yonyoucloud.uretail.bill.dao.StatusItemDAOImpl"></bean>
+    <bean id="toolbarDAO" class="com.yonyoucloud.uretail.bill.dao.ToolbarDAOImpl"></bean>
+    <bean id="billitemDAO" class="com.yonyoucloud.uretail.bill.dao.BillitemDAOimpl"></bean>
+    <bean id="jointQueryDAO" class="com.yonyoucloud.uretail.bill.dao.JointQueryDAOImpl"></bean>
+    <bean id="billProcessDAO" class="com.yonyoucloud.uretail.bill.dao.BillProcessDAOImpl"></bean>
+</beans>

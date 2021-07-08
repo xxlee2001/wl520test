@@ -1,0 +1,33 @@
+.findPwdTip{
+    color: #111111;
+    padding-top: 0.24rem;
+    line-height: 0.28rem;
+    font-size: 0.2rem;
+    font-family: PingFangSC-Regular, sans-serif;
+}
+.find-pwd-title {
+    color: #111111;
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: 0.35rem;
+}
+.find-pwd-content .am-list-line{
+    display: flex !important;
+    align-items: center !important;
+}
+.find-pwd-header {
+    display: flex;
+    align-items: center;
+}
+.find-pwd-back {
+    color: #111111;
+    width: 0.4rem;
+}
+.find-pwd-title {
+    color: #111111;
+    font-size: 0.36rem;
+    flex: 1;
+    text-align: center;
+}
+.log-con-next-find-pwd {
+    padding-top: 0.48rem;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 3</title>
+    <g id="02-启动页及独立应用" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="工作台" transform="translate(-586.000000, -104.000000)">
+            <g id="编组-3" transform="translate(586.000000, 104.000000)">
+                <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="44" height="44"></rect>
+                <g id="邮件" transform="translate(0.000000, 5.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M40.6875,0.8125 C42.0682119,0.8125 43.1875,1.93178813 43.1875,3.3125 L43.1875,31.1875 C43.1875,32.0159271 42.5159271,32.6875 41.6875,32.6875 L3.3125,32.6875 C1.93178813,32.6875 0.8125,31.5682119 0.8125,30.1875 L0.8125,3.3125 C0.8125,1.93178813 1.93178813,0.8125 3.3125,0.8125 L40.6875,0.8125 Z M40.1875,11.3745 L22,21.075 L3.8125,11.3755 L3.8125,29.6875 L40.1875,29.6875 L40.1875,11.3745 Z M40.1875,3.8125 L3.8125,3.8125 L3.8125,7.9745 L22,17.675 L40.1875,7.9735 L40.1875,3.8125 Z" id="形状结合"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

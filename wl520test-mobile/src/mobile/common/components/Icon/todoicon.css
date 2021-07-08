@@ -1,0 +1,14 @@
+.todo-icon{
+  display: inline-block;
+  width: .42rem;
+  height: .31rem;
+  background: url(./todo.svg) no-repeat center center;
+  background-size: .42rem auto;
+}
+.msg-icon{
+  display: inline-block;
+  width: .3rem;
+  height: .41rem;
+  background: url(./msg.svg) no-repeat center center;
+  background-size: .42rem auto;
+}

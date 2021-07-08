@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="750px" height="516px" viewBox="0 0 750 516" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="750" height="516"></rect>
+        <linearGradient x1="52.1708333%" y1="95.1953771%" x2="52.1708333%" y2="1.84508802%" id="linearGradient-3">
+            <stop stop-color="#FF3B3B" stop-opacity="0.887964221" offset="0%"></stop>
+            <stop stop-color="#DC2F2F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#FFF300" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFE300" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="12.9394531%" x2="88.1876628%" y2="72.648112%" id="linearGradient-5">
+            <stop stop-color="#FFD100" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFDC3F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFD100" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFD100" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="24.2455576%" y1="6.79381127%" x2="100%" y2="89.051011%" id="linearGradient-7">
+            <stop stop-color="#FFD100" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFD100" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="110.554176%" y1="27.7548462%" x2="23.1162383%" y2="93.9706968%" id="linearGradient-8">
+            <stop stop-color="#FFD100" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFD100" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="44.0116671%" x2="16.5272588%" y2="16.5436285%" id="linearGradient-9">
+            <stop stop-color="#FFD100" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFDE5A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="独立应用" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的" transform="translate(0.000000, 57.000000)">
+            <g id="分组-4" transform="translate(0.000000, -57.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(-201.000000, -123.000000)">
+                        <ellipse id="椭圆形" fill="url(#linearGradient-3)" cx="576" cy="296" rx="556" ry="296"></ellipse>
+                        <rect id="Rectangle" fill="url(#linearGradient-4)" opacity="0.600000024" transform="translate(597.996134, 274.566987) scale(1, -1) rotate(-330.000000) translate(-597.996134, -274.566987) " x="513.996134" y="274.066987" width="168" height="1"></rect>
+                        <circle id="Path-Copy-2" fill-opacity="0.8" fill="url(#linearGradient-5)" opacity="0.149999991" cx="378" cy="292" r="96"></circle>
+                        <circle id="Path-Copy-4" fill-opacity="0.8" fill="url(#linearGradient-6)" opacity="0.300000012" cx="761" cy="208" r="12"></circle>
+                        <circle id="Path-Copy-3" fill-opacity="0.8" fill="url(#linearGradient-7)" opacity="0.119999997" cx="128" cy="178" r="128"></circle>
+                        <ellipse id="Path" fill-opacity="0.8" fill="url(#linearGradient-8)" opacity="0.100000001" cx="868" cy="122.5" rx="107" ry="106.5"></ellipse>
+                        <ellipse id="Path-Copy" fill-opacity="0.8" fill="url(#linearGradient-9)" opacity="0.200000003" cx="826" cy="472.5" rx="167" ry="166.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

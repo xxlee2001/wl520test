@@ -1,0 +1,172 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="./mtl.js"></script>
+  <script>
+    const configInfoMock = {
+      "config": {
+        "envMode": 1,
+        "envURL": "https://build.yyuap.com/mobile-app/rest/v1/mobile/app/workbench/env",
+        "theme": 1,
+        "showRememberPwd": 1,
+        "loginType": [0, 1, 2],
+        "homeMode": "1",
+        "homeURL": "https://www.baidu.com"
+      }
+    };
+
+    function _processConfig(projectInfo) {
+      console.log("getConfigInfo====", projectInfo);
+      const info = projectInfo && JSON.parse(projectInfo) || configInfoMock;
+      console.log('projectJson:configInfo', info);
+      let result = {};
+      if (info && info.config) {
+        result = Object.assign(configInfoMock.config, info.config);
+      } else {
+        result = configInfoMock.config;
+      }
+      return result;
+    }
+
+    function getConfigInfoAsync(success = () => {}, fail = () => {}) {
+      const projectInfo = mtl.getConfigSync();
+      if (projectInfo) {
+        success && success(_processConfig(projectInfo));
+      } else {
+        console.log('data:before', +new Date())
+        mtl.getConfig({
+          success(res) {
+            console.log('success:data', +new Date())
+            const info = res || configInfoMock;
+            console.log('projectJson:configInfo', info);
+            let result = {};
+            if (info && info.config) {
+              result = Object.assign(configInfoMock.config, info.config);
+            } else {
+              result = configInfoMock.config;
+            }
+            success && success(result);
+          },
+          fail(err) {
+            console.log('fail:data', +new Date())
+            console.log(JSON.stringify(err));
+            const info = configInfoMock;
+            success && success(configInfoMock.config);
+          }
+        })
+      }
+    }
+
+    function handleEnvAddress() {
+      mtl.getStorage({
+        key: 'key_env_url',
+        success: (res) => {
+          //  COMMENT 成功时
+          const value = res.data;
+          openHtml(value);
+        },
+        fail: () => {
+          //  COMMENT 失败时获取配置信息里面的环境地址
+          getConfigInfoAsync((info) => {
+            const envURL = info.envURL;
+            console.log('configInfo :>> ', info);
+            mtl.setStorage({
+              key: 'key_env_url',
+              data: envURL,
+            });
+            const value = envURL;
+            openHtml(info);
+          });
+
+        }
+      });
+    }
+
+    function startMount() {
+      getConfigInfoAsync((info) => {
+        const envURL = info.envURL;
+        console.log('configInfo :>> ', info);
+        mtl.getStorage({
+          key: 'key_env_url',
+          success: (res) => {
+            // COMMENT 成功时
+            const value = res.data;
+            info.envURL = value
+            openHtml(info);
+          },
+          fail: () => {
+            // COMMENT 失败时获取配置信息里面的环境地址
+            const envURL = info.envURL;
+            console.log('configInfo :>> ', info);
+            mtl.setStorage({
+              key: 'key_env_url',
+              data: envURL,
+            });
+            openHtml(info);
+
+          }
+        });
+
+        mtl.setStorage({
+          key: 'key_env_url',
+          data: envURL,
+        });
+        openHtml(info);
+      });
+    }
+
+    function openHtml(info) {
+      const {
+        envURL,
+        theme,
+        showRememberPwd,
+        loginType,
+        homeMode,
+        appId,
+        appName,
+        envMode,
+      } = info
+      if (!envURL) {
+        console.log('loginHandle->openHtlm:envURL :>> ', envURL);
+        return;
+      }
+      let path = "/runtime-mobile/workbench/home/work";
+      if (+homeMode === 0) {
+        // window.location.href = `${location.origin}/workbench/login?envURL=${value}`;
+        path = "/runtime-mobile/workbench/home/work";
+      } else {
+        path = "/runtime-mobile/workbench/login";
+      }
+      const baseEnvUrl = new URL(envURL).origin;
+        window.location.href =
+      `${baseEnvUrl}${path}?
+      envURL=${envURL}&
+      theme=${theme}&
+      envMode=${envMode}&
+      appName=${appName}&
+      appIdConfig=${appId}&
+      showRememberPwd=${showRememberPwd}&
+      loginType=${loginType.join()}`;
+      // window.location.href = `http://xgy.yyuap.com:3003/workbench/login?envURL=${envURL}&theme=${theme}&showRememberPwd=${showRememberPwd}&loginType=${loginType.join()}`
+    }
+    // handleEnvAddress();
+    startMount();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .login-onread {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <img class="login-onread" src="./onready-load@1x.png" alt="" srcset="">
+</body>
+
+</html>

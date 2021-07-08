@@ -1,0 +1,8 @@
+.lanuage-botoom-line .am-list-body div:not(:last-child) .am-list-line .am-list-content {
+    border-bottom: 0.01rem solid #E6E6E6 ;
+}
+.i18nsetting {
+    flex: 1;
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+}

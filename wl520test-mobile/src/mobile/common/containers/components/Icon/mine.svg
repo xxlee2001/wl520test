@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>形状结合</title>
+    <defs>
+        <linearGradient x1="50%" y1="3.02339234%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#888888" offset="0%"></stop>
+            <stop stop-color="#AAAAAA" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="02-启动页及独立应用" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-536.000000, -1468.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="编组" transform="translate(0.000000, 1457.000000)">
+                <g id="Bars-/-Tab-Bars-/Tab-Bar2-/-Light" transform="translate(0.000000, 1.000000)">
+                    <g id="tabbar/item-5" transform="translate(515.000000, 10.000000)">
+                        <g id="Group-5" transform="translate(21.000000, 0.000000)">
+                            <path d="M42.6112027,34.2241959 C44.4849001,34.2241959 46.0030946,35.7423904 46.0030946,37.6160878 L46.0030946,43.8725743 C46.0030946,45.2231636 44.9077379,46.3185203 43.5571486,46.3185203 L11.4186351,46.3185203 C10.0680458,46.3185203 8.97268919,45.2231636 8.97268919,43.8725743 L8.97268919,37.6160878 C8.97268919,35.7426011 10.4916188,34.2241959 12.3645811,34.2241959 L42.6112027,34.2241959 Z M27.6775541,8.97335135 C34.1944841,8.97335135 39.4902568,14.158397 39.4902568,20.5703784 C39.4902568,26.9823598 34.1944841,32.1674054 27.6775541,32.1674054 C21.1598451,32.1674054 15.8639054,26.9825247 15.8639054,20.5703784 C15.8639054,14.158232 21.1598451,8.97335135 27.6775541,8.97335135 Z" id="形状结合"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

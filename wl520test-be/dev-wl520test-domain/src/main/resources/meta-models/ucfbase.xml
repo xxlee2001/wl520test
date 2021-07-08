@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components xmlns="http://www.imeta.org/meta"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.imeta.org/meta http://upsms.yonyouup.com/meta.xsd">
+    <references>
+        <reference file="java.xml" />
+    </references>
+
+    <component name="entity" moduleName="ucfbase" title="公用实体组件">
+        <class name="BizObject" title="基类">
+            <attributes>
+                <attribute name="id" title="ID" type="String" iLength="64" isKey="true"/>
+                <attribute name="pubts" columnName="pubts" title="时间戳" type="DateTime" isSyncKey="true"/>
+            </attributes>
+        </class>
+    </component>
+
+    <component name="ucfbaseItf" moduleName="ucfbase"
+               title="ucf基础接口">
+        <interface name="ITree" title="树型结构" tree_tag="true">
+            <attributes>
+                <attribute name="parent" columnName="parent_id"
+                           title="上级分类" type="String" iLength="100" />
+                <attribute name="level" columnName="level" title="层级"
+                           type="Integer" />
+                <attribute name="path" columnName="path" title="路径"
+                           type="String" iLength="255" />
+                <attribute name="sort" columnName="sort_num" title="排序号"
+                           type="Integer" />
+                <attribute name="isEnd" title="是否末级" type="Boolean" />
+            </attributes>
+        </interface>
+        <interface name="CustomItem" title="自定义项">
+            <attributes>
+                <attribute name="define1" title="自定义项1" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define2" title="自定义项2" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define3" title="自定义项3" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define4" title="自定义项4" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define5" title="自定义项5" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define6" title="自定义项6" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define7" title="自定义项7" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define8" title="自定义项8" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define9" title="自定义项9" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define10" title="自定义项10" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define11" title="自定义项11" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define12" title="自定义项12" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define13" title="自定义项13" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define14" title="自定义项14" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define15" title="自定义项15" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define16" title="自定义项16" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define17" title="自定义项17" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define18" title="自定义项18" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define19" title="自定义项19" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define20" title="自定义项20" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define21" title="自定义项21" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define22" title="自定义项22" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define23" title="自定义项23" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define24" title="自定义项24" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define25" title="自定义项25" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define26" title="自定义项26" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define27" title="自定义项27" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define28" title="自定义项28" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define29" title="自定义项29" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define30" title="自定义项30" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define31" title="自定义项31" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define32" title="自定义项32" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define33" title="自定义项33" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define34" title="自定义项34" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define35" title="自定义项35" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define36" title="自定义项36" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define37" title="自定义项37" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define38" title="自定义项38" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define39" title="自定义项39" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define40" title="自定义项40" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define41" title="自定义项41" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define42" title="自定义项42" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define43" title="自定义项43" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define44" title="自定义项44" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define45" title="自定义项45" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define46" title="自定义项46" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define47" title="自定义项47" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define48" title="自定义项48" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define49" title="自定义项49" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define50" title="自定义项50" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define51" title="自定义项51" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define52" title="自定义项52" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define53" title="自定义项53" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define54" title="自定义项54" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define55" title="自定义项55" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define56" title="自定义项56" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define57" title="自定义项57" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define58" title="自定义项58" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define59" title="自定义项59" type="String"
+                           isGlobalization="true" iLength="255" />
+                <attribute name="define60" title="自定义项60" type="String"
+                           isGlobalization="true" iLength="255" />
+            </attributes>
+        </interface>
+
+        <interface name="Deletable" title="逻辑删除相关">
+            <attributes>
+                <attribute name="isDeleted" title="逻辑删除标记" type="Boolean" defaultValue="false" isPartition="true" />
+            </attributes>
+        </interface>
+
+        <interface name="IPosition" title="位置信息">
+            <attributes>
+                <attribute name="longitude" type="Decimal" title="经度" iPrecision="19" iScale="8"/>
+                <attribute name="latitude" type="Decimal" title="纬度"  iPrecision="19" iScale="8"/>
+            </attributes>
+        </interface>
+
+        <!-- 云审接口 -->
+        <interface name="IApprovalFlow" title="审批流信息">
+            <attributes>
+                <attribute name="isWfControlled" title="是否审批流控制" type="Boolean" defaultValue="false"/>
+                <attribute name="verifystate" title="审批状态" type="Short" defaultValue="0"/>
+                <attribute name="returncount" title="退回次数" type="Short" defaultValue="0"/>
+            </attributes>
+        </interface>
+
+        <interface name="IAutoCode" title="自动编码"></interface>
+
+
+    </component>
+</components>

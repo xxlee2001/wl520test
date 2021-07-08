@@ -1,0 +1,7 @@
+.slider-frame, .slider-list, .am-carousel{
+    height: 100%  !important;
+}
+.work-banner .am-carousel-wrap{
+    text-align: right;
+    padding-right: 0.5rem;
+}
