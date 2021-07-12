@@ -33,7 +33,7 @@ import java.io.IOException;
  */
 @EnableAsync
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, RabbitAutoConfiguration.class})
-@ComponentScan(basePackages = {"com.yonyou", "com.yonyoucloud","com.walsin"},
+@ComponentScan(basePackages = {"com.yonyou", "com.yonyoucloud", "com.walsin"},
         excludeFilters = {@ComponentScan.Filter(type = FilterType.REGEX,
                 pattern = {"com.yonyoucloud.uretail.*",// "com.yonyou.ucf.mdd.poi.service.POIService",
 //                        "com.yonyou.ucf.mdf.app.controller.BillController", "com.yonyou.ucf.mdf.app.controller.BpmController", "com.yonyou.ucf.mdf.app.controller.FileUploadController",

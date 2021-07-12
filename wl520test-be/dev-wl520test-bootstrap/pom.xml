@@ -496,6 +496,11 @@
             <groupId>com.yonyou.pap.caep</groupId>
             <artifactId>jasypt-spring-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.2.11.RELEASE</version>
+        </dependency>
 
 
     </dependencies>

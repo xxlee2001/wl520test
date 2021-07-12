@@ -1,0 +1,25 @@
+.approve-opinion {
+  background: hsla(0, 0%, 97.6%, 0.8);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  min-height: 35px;
+  border-radius: 4px;
+  height: auto;
+  padding: 4px 23px 4px 8px;
+}
+
+.ybdr-joint-qry {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.ybdr-joint-qry iframe {
+  -ms-flex: 1;
+      flex: 1;
+}
+
+
+/*# sourceMappingURL=extend.min.css.map*/
